@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Add Product</h1>
+    <br>
+    <form>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" placeholder="name">
+            <label for="name">Product name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="price" placeholder="price">
+            <label for="price">Product price</label>
+        </div>
+        <div class="form-floating mb-3">
+            <select class="form-select" aria-label="Select product category" id="category">
+                <option selected>Select product category</option>
+                <option value="drinks">Drinks</option>
+                <option value="meat">Meat</option>
+                <option value="dairy">Dairy</option>
+                <option value="snacks">Snacks</option>
+                <option value="basic">Basic</option>
+            </select>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="image-link" placeholder="image-link">
+            <label for="price">Enter a link to the product image</label>
+        </div>
+        <br>
+        <button type="button" class="btn btn-outline-success" onclick="addProductToTable()">Add Product</button>
+    </form>
+    <br>
+    <h1>My Cart</h1>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Product name</th>
+                <th scope="col">Product price</th>
+                <th scope="col">Product category</th>
+                <th scope="col">Product image</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+</body>
+
+</html>
